@@ -26,11 +26,11 @@ public class FileStorageService {
         this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDir())
                 .toAbsolutePath().normalize();
 
-        try {
-            Files.createDirectories(this.fileStorageLocation);
-        } catch (Exception ex) {
-            throw new FileStorageException("Could not create the directory where the uploaded files will be stored.", ex);
-        }
+       // try {
+         //   Files.createDirectories(this.fileStorageLocation);
+       // } catch (Exception ex) {
+           // throw new FileStorageException("Could not create the directory where the uploaded files will be stored.", ex);
+       // }
     }
 
     public String storeFile(MultipartFile file) {
